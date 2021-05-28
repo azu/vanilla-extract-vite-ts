@@ -1,11 +1,18 @@
-import React, { useState } from 'react'
+import React, { Suspense, useMemo, useState } from 'react'
 import logo from './logo.svg'
 import * as Style from './App.css';
+const LazyComponent = React.lazy(() => new Promise(resolve => {
+  // @ts-ignore
+  setTimeout(() => import("./Dynamic").then(c => resolve(c)), 2000)
+}));
+
 function App() {
   const [count, setCount] = useState(0)
-
   return (
     <div className={Style.App}>
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyComponent />
+      </Suspense>
       <header className={Style.AppHeader}>
         <img src={logo} className={Style.AppLogo} alt="logo" />
         <p>Hello Vite + React + vanilla-extract!</p>
