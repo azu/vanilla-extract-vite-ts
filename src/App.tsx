@@ -10,7 +10,7 @@ function App() {
         <img src={logo} className={Style.AppLogo} alt="logo" />
         <p>Hello Vite + React + vanilla-extract!</p>
         <p>
-          <button onClick={() => setCount((count) => count + 1)}>
+          <button className={Style.Button} onClick={() => setCount((count) => count + 1)}>
             count is: {count}
           </button>
         </p>

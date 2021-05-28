@@ -5,12 +5,13 @@ export const App = style({
 
 export const AooLogoSpin = keyframes({
   from: {
-    transform: "0deg"
+    transform: "rorate(0deg)"
   },
   to: {
-    transform: "360deg"
+    transform: "rorate(360deg)"
   }
 }, "AooLogoSpin");
+
 export const AppLogo = style({
   height: "40vmin",
   pointerEvents: "none",
