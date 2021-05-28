@@ -8,7 +8,7 @@ function App() {
     <div className={Style.App}>
       <header className={Style.AppHeader}>
         <img src={logo} className={Style.AppLogo} alt="logo" />
-        <p>Hello Vite + React!</p>
+        <p>Hello Vite + React + vanilla-extract!</p>
         <p>
           <button onClick={() => setCount((count) => count + 1)}>
             count is: {count}
